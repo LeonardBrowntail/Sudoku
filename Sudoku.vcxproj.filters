@@ -33,4 +33,36 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Solution\3.sol">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Solution\4.sol">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Solution\5.sol">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Solution\6.sol">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Solution\7.sol">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Solution\8.sol">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Solution\9.sol">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Solution\10.sol">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Solution\1.sol">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Solution\2.sol">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

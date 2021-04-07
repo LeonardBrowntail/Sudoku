@@ -146,6 +146,18 @@
     <ClInclude Include="Loader.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Solution\1.sol" />
+    <None Include="Solution\10.sol" />
+    <None Include="Solution\2.sol" />
+    <None Include="Solution\3.sol" />
+    <None Include="Solution\4.sol" />
+    <None Include="Solution\5.sol" />
+    <None Include="Solution\6.sol" />
+    <None Include="Solution\7.sol" />
+    <None Include="Solution\8.sol" />
+    <None Include="Solution\9.sol" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

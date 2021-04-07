@@ -5,7 +5,7 @@
 class GameManager
 {
 private:
-	Board board = Board();
+	Board board;
 	Player player;
 	int difficulty;
 	bool playing;
@@ -30,6 +30,7 @@ void GameManager::Start()
 	board.CreateHints(difficulty);
 	while (playing)
 	{
+		system("cls");
 		//Draw the board
 		board.DrawBoard();
 
@@ -66,24 +67,28 @@ void GameManager::PlayerMove()
 		//TODO: implement redo function
 		std::cout << "Unimplemented yet!\n";
 	}
-	//Input
+	//Get x coord
 	else if (in > '0' && in <= '9')
 	{
-		//get x coord
 		int x = in - '0';
 		fflush(stdin);
-		std::cout << "Input y coord (enter q to cancel): ";
+		std::cout << "Input y coord (non-numeric keys to cancel): ";
 		std::cin >> in;
+		//Get y coord
 		if (in > '0' && in <= '9')
 		{
 			int y = in - '0';
+			//Get input value
 			while (true)
 			{
 				fflush(stdin);
-				std::cout << "Input the number you wish to put in: ";
+				std::cout << "Input the number you wish to put in (non-numeric keys to cancel): ";
 				std::cin >> in;
-
-				if (in == '')
+				if (in > '0' && in <= '9')
+				{
+					board.SetCell(x, y, in - '0');
+					break;
+				}
 			}
 		}
 	}
