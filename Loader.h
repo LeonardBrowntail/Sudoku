@@ -1,3 +1,6 @@
+/*==================================================================*/
+/* Header file is written by: Aydin Ihsan Ibrahim Nurdin 4210191004 */
+/*==================================================================*/
 #pragma once
 constexpr auto BOARD_SIZE = 9;
 class Loader
@@ -25,6 +28,8 @@ Loader::Loader()
 	std::uniform_int_distribution<int> dist(1, 10);
 
 	fileNum = dist(gen);
+
+	LoadAnswer();
 }
 
 //Load a solution from 10 different solutions
@@ -35,7 +40,7 @@ void Loader::LoadAnswer()
 {
 	//Create file name to be opened
 	std::string fileName;
-	fileName = std::to_string(fileNum) + ".sol";
+	fileName = "./Solution/" + std::to_string(fileNum) + ".sol";
 
 	//Opening solution file
 	std::ifstream file;

@@ -141,8 +141,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DeleteCell.h" />
+    <ClInclude Include="FillCell.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Board.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="Invoker.h" />
     <ClInclude Include="Loader.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>

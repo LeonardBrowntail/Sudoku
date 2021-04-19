@@ -1,3 +1,6 @@
+/*==================================================================*/
+/* Header file is written by: Aydin Ihsan Ibrahim Nurdin 4210191004 */
+/*==================================================================*/
 #pragma once
 #include "Loader.h"
 constexpr auto BOARD_SQRT = 3;
@@ -9,11 +12,19 @@ private:
 	Loader sol;
 	bool isFull;
 public:
+	/* Constructor */
 	Board();
-	void CreateHints(int);
+
+	/* Setter */
 	void SetCell(int, int, int);
-	void DelCell(int, int);
+
+	/* Getter */
+	int GetCell(int, int);
 	bool IsFull();
+
+	/* Other Functions */
+	void CreateHints(int);
+	void DelCell(int, int);
 	void DrawBoard();
 };
 
@@ -44,16 +55,16 @@ void Board::CreateHints(int dif)
 	}
 }
 
-//Set cell with x and y coordinate with input
+//Set cell with x - 1 and y - 1 coordinate with input
 void Board::SetCell(int x, int y, int input)
 {
-	cell[x][y] = input;
+	cell[x - 1][y - 1] = input;
 }
 
-//Delete cell
+//Delete cell at x-1 and y-1
 void Board::DelCell(int x, int y)
 {
-	cell[x][y] = 0;
+	cell[x - 1][y - 1] = 0;
 }
 
 //Detect if board is full
@@ -70,15 +81,33 @@ bool Board::IsFull()
 	return true;
 }
 
+//Get a value inside a cell
+int Board::GetCell(int x, int y)
+{
+	return cell[x][y];
+}
+
 //Draw the board
 void Board::DrawBoard()
 {
-	for (int y = 0; y < BOARD_SIZE; y++)
+	//Repeat three times
+	for (int i = 1; i <= 3; i++)
 	{
-		for (int x = 0; x < BOARD_SIZE; x++)
+		for (int y = BOARD_SQRT * (i - 1); y < BOARD_SQRT * i; y++)
 		{
-			std::cout << cell[x][y];
+			for (int x = 0; x < BOARD_SIZE; x++)
+			{
+				if (x == BOARD_SQRT || x == BOARD_SQRT * 2)
+				{
+					std::cout << " | " << cell[x][y];
+				}
+				else
+				{
+					std::cout << cell[x][y];
+				}
+			}
+			std::cout << std::endl;
 		}
-		std::cout << std::endl;
+		std::cout << "===============\n";
 	}
 }

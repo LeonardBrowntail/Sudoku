@@ -1,10 +1,11 @@
 /*==============================================*/
 /* Code is written by: Prawida Yumia 4210191005 */
 /*==============================================*/
-#include "GameManager.h"
-int main()
+#pragma once
+class Command
 {
-	GameManager game;
-	game.Play();
-	return(0);
-}
+private:
+public:
+	virtual void Execute() = 0;
+	virtual void Undo() = 0;
+};
